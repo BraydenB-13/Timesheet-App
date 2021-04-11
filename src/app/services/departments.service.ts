@@ -13,9 +13,7 @@ export class DepartmentsService {
     {id: '3', name: 'Finance'},
   ];
 
-  constructor(
-    private http: HttpClient
-  ) {}
+  constructor(private http: HttpClient) {}
 
   getDeparments(): Observable<Department[]> {
     return this.http.get<Department[]>(`https://hr-timesheet-test.firebaseio.com/departments.json`);
